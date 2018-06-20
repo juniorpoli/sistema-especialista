@@ -1,0 +1,304 @@
+% CampeaoS.NKB - A Sample campeao identification system (ADAPTADO).
+% Consulte por top_goal e o programa irá perguntar para a identificação
+% Veja o exemplo completo nas referências para guardar informações já perguntadas
+% (com backtracking).
+top_goal :-
+	campeao(X),
+	write('A resposta e ') , write(X) , nl , !.
+top_goal :-
+    write('Nenhuma resposta encontrada') , nl.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% campeoes
+campeao(riven) :-
+	categoria(lutador),
+	fisico(humano),
+        lane(top),
+        origem(noxus),
+        power_spike(mid_game),
+        funcao(skirmish),
+        win_rate(media),
+        cor_cabelo(branco),
+        arma(espada),
+	kit(medio), !.
+campeao(darius) :-
+	categoria(lutador),
+	fisico(humano),
+        lane(top),
+        origem(noxus),
+        power_spike(early_game),
+        funcao(team_fight),
+        win_rate(alta),
+        cor_cabelo(preto),
+        arma(machado),
+	kit(alto), !.
+campeao(volibear) :-
+	categoria(lutador),
+	fisico(humanoide),
+        lane(jungle),
+        origem(ionia),
+        power_spike(early_game),
+        funcao(skirmish),
+        win_rate(media),
+        cor_cabelo(branco),
+        arma(garras),
+	kit(medio), !.
+campeao(renekton) :-
+	categoria(lutador),
+	fisico(humanoide),
+        lane(top),
+        origem(shurima),
+        power_spike(early_game),
+        funcao(bully),
+        win_rate(alta),
+        cor_cabelo(careca),
+        arma(espada),
+	kit(alto), !.
+campeao(shaco) :-
+	categoria(assassino),
+	fisico(humano),
+        lane(jungle),
+        origem(ilhas_das_sombras),
+        power_spike(early_game),
+        funcao(skirmish),
+        win_rate(alta),
+        cor_cabelo(indefinido),
+        arma(adaga),
+	kit(medio), !.
+campeao(talon) :-
+	categoria(assassino),
+        fisico(humano),
+        lane(mid),
+        origem(noxus),
+        power_spike(mid_game),
+        funcao(skirmish),
+        win_rate(baixa),
+        cor_cabelo(preto),
+        arma(adaga),
+	kit(baixo), !.
+campeao(rengar) :-
+	categoria(assassino),
+	fisico(humanoide),
+        lane(jungle),
+        origem(ionia),
+        power_spike(mid_game),
+        funcao(pick_off),
+        win_rate(baixa),
+        cor_cabelo(branco),
+        arma(adaga),
+	kit(medio), !.
+campeao(khazix) :-
+	categoria(assassino),
+        fisico(humanoide),
+        lane(jungle),
+        origem(vazio),
+        power_spike(mid_game),
+        funcao(pick_off),
+        win_rate(media),
+        cor_cabelo(careca),
+        arma(garras),
+	kit(baixo), !.
+campeao(aurelion_sol) :-
+	categoria(mago),
+	fisico(humanoide),
+        lane(mid),
+        origem(espaco),
+        power_spike(early_game),
+        funcao(team_fight),
+        win_rate(baixa),
+        cor_cabelo(roxo),
+        arma(energia),
+	kit(medio), !.
+campeao(fiddlesticks) :-
+	categoria(mago),
+	fisico(humanoide),
+        lane(jungle),
+        origem(ilhas_das_sombras),
+        power_spike(late_game),
+        funcao(team_fight),
+        win_rate(baixa),
+        cor_cabelo(palha),
+        arma(foice),
+	kit(alto), !.
+campeao(annie) :-
+	categoria(mago),
+	fisico(humano),
+        lane(mid),
+        origem(noxus),
+        power_spike(mid_game),
+        funcao(team_fight),
+        win_rate(media),
+        cor_cabelo(marrom),
+        arma(fogo),
+        kit(alto), !.
+campeao(twisted_fate) :-
+	categoria(mago),
+	fisico(humano),
+        lane(mid),
+        origem(aguas_de_sentina),
+        power_spike(mid_game),
+        funcao(pick_off),
+        win_rate(baixa),
+        cor_cabelo(preto),
+        arma(cartas),
+	kit(medio), !.
+campeao(nami) :-
+	categoria(suporte),
+	fisico(humanoide),
+        lane(bot),
+        origem(oceano),
+        power_spike(early_game),
+        funcao(team_fight),
+        win_rate(baixa),
+        cor_cabelo(verde),
+        arma(cajado),
+	kit(medio), !.
+campeao(janna) :-
+	categoria(suporte),
+	fisico(humano),
+        lane(bot),
+        origem(demacia),
+        power_spike(late_game),
+        funcao(team_fight),
+        win_rate(alta),
+        cor_cabelo(branco),
+        arma(cajado),
+	kit(alto), !.
+campeao(zilean) :-
+	categoria(suporte),
+	fisico(humano),
+        lane(bot),
+        origem(piltover),
+        power_spike(late_game),
+        funcao(pick_off),
+        win_rate(media),
+        cor_cabelo(branco),
+        arma(bomba),
+        kit(baixo), !.
+campeao(ivern) :-
+	categoria(suporte),
+	fisico(humanoide),
+        lane(jungle),
+        origem(ionia),
+        power_spike(mid_game),
+        funcao(skirmish),
+        win_rate(alta),
+        cor_cabelo(verde),
+        arma(natureza),
+	kit(alto), !.
+campeao(twitch) :-
+	categoria(atirador),
+	fisico(humanoide),
+        lane(bot),
+        origem(noxus),
+        power_spike(late_game),
+        funcao(pick_off),
+        win_rate(alta),
+        cor_cabelo(verde),
+        arma(besta),
+        kit(baixo), !.
+campeao(teemo) :-
+	categoria(atirador),
+	fisico(humanoide),
+        lane(top),
+        origem(ionia),
+        power_spike(late_game),
+        funcao(bully),
+        win_rate(alta),
+        cor_cabelo(marrom),
+        arma(zarabatana),
+	kit(medio), !.
+campeao(lucian) :-
+	categoria(atirador),
+	fisico(humano),
+        lane(bot),
+        origem(piltover),
+        power_spike(mid_game),
+        funcao(skirmish),
+        win_rate(alta),
+        cor_cabelo(preto),
+        arma(pistola),
+	kit(baixo), !.
+campeao(ashe) :-
+	categoria(atirador),
+	fisico(humano),
+        lane(bot),
+        origem(freljord),
+        power_spike(late_game),
+        funcao(pick_off),
+        win_rate(media),
+        cor_cabelo(branco),
+        arma(arco),
+        kit(alto), !.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CARACTERISTICAS
+
+categoria(assassino) :-
+	tipo(dano_de_ataque),
+        range(melee),
+        dano(alto),
+        build(dano).
+categoria(lutador) :-
+        tipo(dano_de_ataque),
+        dano(medio),
+        range(melee),
+        build(dano).
+categoria(mago) :-
+        tipo(poder_de_habilidade),
+        range(ranged),
+        dano(alto),
+        build(dano).
+categoria(atirador) :-
+	tipo(dano_de_ataque),
+        dano(alto),
+        range(ranged),
+        build(dano).
+categoria(suporte) :-
+	tipo(poder_de_habilidade),
+        range(ranged),
+        dano(baixo),
+	build(tanque).
+categoria(tanque) :-
+	tipo(dano_de_ataque),
+        dano(baixo),
+	range(melee),
+        build(tanque).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Perguntas necessárias para a classificação
+
+fisico(X) :-
+	ask(fisico,X).
+kit(X) :-
+	ask(kit,X).
+range(X) :-
+	ask(range,X).
+tipo(X) :-
+	ask(tipo,X).
+dano(X) :-
+	ask(dano,X).
+build(X) :-
+	ask(build,X).
+lane(X) :-
+	ask(lane,X).
+origem(X) :-
+	ask(origem,X).
+power_spike(X) :-
+	ask(power_spike,X).
+funcao(X) :-
+	ask(funcao,X).
+win_rate(X) :-
+	ask(win_rate,X).
+cor_cabelo(X) :-
+	ask(cor_cabelo,X).
+arma(X) :-
+	ask(arma,X).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%A regra ask
+ask(Attr, Val):-
+		write(Attr:Val),
+		write('? '),
+		read(yes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
